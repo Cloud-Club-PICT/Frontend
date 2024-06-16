@@ -3,7 +3,7 @@ const Navbar = () => {
         <div>
             <nav className="bg-[#232F3E] p-4">
                 <div className="container mx-auto flex justify-between items-center">
-                    <img src="" alt="AWS Logo" className="h-8" />{" "}
+                    <img src="./images/logo_NoBg.png" alt="AWS Logo" className="h-16 w-auto filter drop-shadow-2xl" />{" "}
                     <ul className="flex space-x-4">
                         <li>
                             <a href="#" className="text-white hover:underline">

@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import { createBrowserRouter as Router, Route, createRoutesFromElements, RouterProvider } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import PageNotFound from './pages/PageNotFound';

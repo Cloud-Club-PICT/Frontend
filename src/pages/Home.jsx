@@ -1,10 +1,9 @@
-import { useNavigate } from "react-router-dom";
 import LaunchPage from "../components/Launch Page/LaunchPage";
+import NavBar from "../components/NavbarComponent/Navbar";
 const Home = () => {
-  const navigate = useNavigate();
-
   return (
     <>
+      <NavBar />
       <LaunchPage />
     </>
   );

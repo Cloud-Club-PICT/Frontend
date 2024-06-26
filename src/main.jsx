@@ -15,11 +15,11 @@ import Intro from "./pages/Intro";
 
 const router = new Router(
   createRoutesFromElements(
-    <Route path="/" exact element={<Layout />}>
-      <Route index element={<Home />} />
+    <>
+      <Route path="/" exact element={<Home />} />
       <Route path="/Intro" element={<Intro />} />
       <Route path="/*" element={<PageNotFound />} />
-    </Route>
+    </>
   )
 );
 

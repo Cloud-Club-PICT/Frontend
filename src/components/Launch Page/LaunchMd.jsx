@@ -18,27 +18,33 @@ const LaunchpageMd = () => {
       >
         <div class="shadow-md overflow-hidden flex flex-col">
           <div class="md:flex">
-
             <div className="absolute left-20 -translate-y-10 top-1/2 text-7xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-text-200">
-              Welcome to AWS PICT</div>
+              Welcome to AWS PICT
+            </div>
             <div className="absolute left-24 translate-y-8 top-1/2 mt-2 text-lg text-text-200">
-              Join AWS Cloud Club at PICT and unlock your potential in cloud computing.
+              Join AWS Cloud Club at PICT and unlock your potential in cloud
+              computing.
               <br />
-              Gain hands-on experience, industry skills, and be part of an innovative community!
+              Gain hands-on experience, industry skills, and be part of an
+              innovative community!
             </div>
             <div className="absolute top-1/2 right-36 -translate-y-6 md:shrink-0">
-                {/* <img src="./images/logo.jpg" alt="Description" className="h-24 w-30 md:h-32 md:w-40 lg:h-40 lg:w-50 translate-x-6 border-2 rounded-lg my-4"/> */}
-                <img src="./images/logo.jpg" alt="Description" className=" object-cover sm:h-32 sm:w-40  lg:h-44 lg:w-48 rounded-lg"/>
+              {/* <img src="./images/logo.jpg" alt="Description" className="h-24 w-30 md:h-32 md:w-40 lg:h-40 lg:w-50 translate-x-6 border-2 rounded-lg my-4"/> */}
+              <img
+                src="./images/logo.jpg"
+                alt="Description"
+                className=" object-cover sm:h-32 sm:w-40  lg:h-44 lg:w-48 rounded-lg"
+              />
             </div>
           </div>
         </div>
         <div className="absolute left-28 top-2/3 -translate-y-3">
-        <button
-          onClick={() => navigate("/Intro")}
-          className="bg-gray-400 bg-opacity-20 text-white text-lg px-7 py-2 rounded hover:bg-gray-400 hover:bg-opacity-40 mb-10"
-        >
-          Join Us
-        </button>
+          <button
+            onClick={() => navigate("/Intro")}
+            className="bg-gray-400 bg-opacity-20 text-white text-lg px-7 py-2 rounded hover:bg-gray-400 hover:bg-opacity-40 mb-10"
+          >
+            Join Us
+          </button>
         </div>
 
         {/* Adjusted positions for each ball */}
@@ -46,9 +52,16 @@ const LaunchpageMd = () => {
           <MouseParallax strength={0.07}>
             <div className="absolute w-2 h-2 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out">
               <div
-                className={`transform -translate-x-2/4 -translate-y-2/4 ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-                  }`}
-                style={{ bottom: "50%", left: "50%", transform: "rotate(46deg)" }}
+                className={`transform -translate-x-2/4 -translate-y-2/4 ${
+                  mounted
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-10 opacity-0"
+                }`}
+                style={{
+                  bottom: "50%",
+                  left: "50%",
+                  transform: "rotate(46deg)",
+                }}
               />
             </div>
           </MouseParallax>
@@ -58,9 +71,16 @@ const LaunchpageMd = () => {
           <MouseParallax strength={0.07}>
             <div className="absolute w-4 h-4 bg-gradient-to-b from-[#DD734F] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out">
               <div
-                className={`transform -translate-x-2/4 -translate-y-2/4 ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-                  }`}
-                style={{ bottom: "50%", left: "50%", transform: "rotate(-56deg)" }}
+                className={`transform -translate-x-2/4 -translate-y-2/4 ${
+                  mounted
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-10 opacity-0"
+                }`}
+                style={{
+                  bottom: "50%",
+                  left: "50%",
+                  transform: "rotate(-56deg)",
+                }}
               />
             </div>
           </MouseParallax>
@@ -70,9 +90,16 @@ const LaunchpageMd = () => {
           <MouseParallax strength={0.07}>
             <div className="absolute hidden xl:block w-4 h-4 bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out">
               <div
-                className={`transform -translate-x-2/4 -translate-y-2/4 ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-                  }`}
-                style={{ bottom: "50%", left: "50%", transform: "rotate(54deg)" }}
+                className={`transform -translate-x-2/4 -translate-y-2/4 ${
+                  mounted
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-10 opacity-0"
+                }`}
+                style={{
+                  bottom: "50%",
+                  left: "50%",
+                  transform: "rotate(54deg)",
+                }}
               />
             </div>
           </MouseParallax>
@@ -82,9 +109,16 @@ const LaunchpageMd = () => {
           <MouseParallax strength={0.07}>
             <div className="absolute w-3 h-3 bg-gradient-to-b from-[#B9AEDF] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out">
               <div
-                className={`transform -translate-x-2/4 -translate-y-2/4 ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-                  }`}
-                style={{ bottom: "50%", left: "50%", transform: "rotate(-65deg)" }}
+                className={`transform -translate-x-2/4 -translate-y-2/4 ${
+                  mounted
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-10 opacity-0"
+                }`}
+                style={{
+                  bottom: "50%",
+                  left: "50%",
+                  transform: "rotate(-65deg)",
+                }}
               />
             </div>
           </MouseParallax>
@@ -94,9 +128,16 @@ const LaunchpageMd = () => {
           <MouseParallax strength={0.07}>
             <div className="absolute w-6 h-6 bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out">
               <div
-                className={`transform -translate-x-2/4 -translate-y-2/4 ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-                  }`}
-                style={{ bottom: "50%", left: "50%", transform: "rotate(-85deg)" }}
+                className={`transform -translate-x-2/4 -translate-y-2/4 ${
+                  mounted
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-10 opacity-0"
+                }`}
+                style={{
+                  bottom: "50%",
+                  left: "50%",
+                  transform: "rotate(-85deg)",
+                }}
               />
             </div>
           </MouseParallax>
@@ -106,9 +147,16 @@ const LaunchpageMd = () => {
           <MouseParallax strength={0.07}>
             <div className="absolute w-6 h-6 bg-gradient-to-b from-[#88E5BE] to-[#1A1A32] rounded-full transition-transform duration-500 ease-out">
               <div
-                className={`transform -translate-x-2/4 -translate-y-2/4 ${mounted ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-                  }`}
-                style={{ bottom: "50%", left: "50%", transform: "rotate(70deg)" }}
+                className={`transform -translate-x-2/4 -translate-y-2/4 ${
+                  mounted
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-10 opacity-0"
+                }`}
+                style={{
+                  bottom: "50%",
+                  left: "50%",
+                  transform: "rotate(70deg)",
+                }}
               />
             </div>
           </MouseParallax>

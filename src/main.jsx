@@ -9,7 +9,6 @@ import {
 } from "react-router-dom";
 // import reportWebVitals from "./reportWebVitals";
 import PageNotFound from "./pages/PageNotFound";
-import Layout from "./layout/Layout";
 import Home from "./pages/Home";
 import Intro from "./pages/Intro";
 

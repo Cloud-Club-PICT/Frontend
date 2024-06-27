@@ -7,6 +7,10 @@ export default {
   theme: {
     extend: {
       colors: {
+        'back': {
+          'light': '#072446',
+          'dark': '#060717'
+        },
         'text-200': '#e0e0e0',
       },
     },

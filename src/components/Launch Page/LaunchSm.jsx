@@ -17,14 +17,20 @@ const LaunchpageSm = () => {
       >
         <div class="shadow-md overflow-hidden flex flex-col">
           <div class="md:flex">
-          <div className="absolute top-1/3 left-1/3 translate-x-2 -translate-y-5 md:shrink-0">
-                <img src="./images/logo.jpg" alt="Description" className=" object-cover h-44 w-52 rounded-lg"/>
+            <div className="absolute top-1/3 left-1/3 translate-x-2 -translate-y-5 md:shrink-0">
+              <img
+                src="./images/logo.jpg"
+                alt="Description"
+                className=" object-cover h-44 w-52 rounded-lg"
+              />
             </div>
             <div className="absolute left-12 -translate-y-24 top-1/2 text-7xl font-bold text-text-200">
-              Welcome to AWS PICT</div>
+              Welcome to AWS PICT
+            </div>
             <div className="absolute leading-relaxed tracking-wide mt-16 left-16 top-1/2 text-3xl text-text-200 mr-4">
-              Join AWS Cloud Club at PICT and unlock your potential in cloud computing.
-              Gain hands-on experience, industry skills, and be part of an innovative community!
+              Join AWS Cloud Club at PICT and unlock your potential in cloud
+              computing. Gain hands-on experience, industry skills, and be part
+              of an innovative community!
             </div>
           </div>
         </div>
@@ -38,7 +44,7 @@ const LaunchpageSm = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default LaunchpageSm;

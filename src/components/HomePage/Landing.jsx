@@ -4,9 +4,10 @@ import { MouseParallax } from "react-just-parallax";
 import AboutUsPage from "./AboutUs";
 import Navbar from "./Navbar"
 import BlogsPage from "./Blogs";
-import ContactUsPage from "./ContactUs";
+import ContactUsPage from "./ContactUs/ContactUs"
 import EventsPage from "./Events";
 import MembersPage from "./Members";
+import Footer from "./Footer";
 
 const LaunchpageMd = () => {
     const navigate = useNavigate();
@@ -143,6 +144,7 @@ const LaunchpageMd = () => {
             <BlogsPage />
             <MembersPage />
             <ContactUsPage />
+            <Footer/>
         </>
     );
 };

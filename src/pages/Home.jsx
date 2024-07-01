@@ -8,7 +8,7 @@ import AboutUsPage from "../components/HomePage/AboutUs";
 import LaunchpageMd from "../components/HomePage/Landing";
 const Home = () => {
   return (
-    <div className="bg-gradient-to-b from-back-dark via-back-light to-back-dark ">
+    <div className="w-screen bg-gradient-to-b from-back-dark via-back-light to-back-dark ">
       <Navbar />
       <LaunchpageMd />
       <AboutUsPage />

@@ -31,6 +31,22 @@ const BlogData = [
         "userImg": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg",
         "publishDate": "2024-06-20",
         "category": "Web"
+      },
+      {
+        "title": "Exploring the World: Top Travel Destinations",
+        "blogImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUr7eiXkCCekoCDOFee8n1vt21DJ0sK0BBBQ&s",
+        "username": "Emily Johnson",
+        "userImg": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg",
+        "publishDate": "2024-06-20",
+        "category": "Web"
+      },
+      {
+        "title": "Exploring the World: Top Travel Destinations",
+        "blogImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUr7eiXkCCekoCDOFee8n1vt21DJ0sK0BBBQ&s",
+        "username": "Emily Johnson",
+        "userImg": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg",
+        "publishDate": "2024-06-20",
+        "category": "Web"
       }
 ]
 

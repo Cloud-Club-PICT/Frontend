@@ -1,5 +1,6 @@
 import React from "react";
 import { VscDebugBreakpointLogUnverified } from "react-icons/vsc";
+import { useInView } from "react-intersection-observer";
 
 const colors = ["neo-green", "neo-blue", "neo-yellow", "neo-orange"];
 const colorsto = [
@@ -130,6 +131,10 @@ const events = [
 ];
 
 const EventsPage = () => {
+  const { ref, inView, entry } = useInView({
+    threshold: 0,
+  });
+  console.log(inView);
   return (
     <React.Fragment>
       <div className="flex flex-col">
@@ -143,7 +148,7 @@ const EventsPage = () => {
       </div>
       {events.map((element, index) => (
         <div className="h-screen w-screen flex flex-col">
-          <div className="flex flex-1 justify-center gap-4">
+          <div ref={ref} className="flex flex-1 justify-center gap-4">
             <EventCard
               title={element.title}
               subtitle={element.subtitle}

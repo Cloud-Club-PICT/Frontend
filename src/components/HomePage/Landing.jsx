@@ -13,11 +13,11 @@ const LaunchpageMd = () => {
   return (
     <>
       <div
-        className="relative bg-cover bg-center bg-no-repeat text-white font-sans h-screen w-screen flex items-end justify-center"
+        className="relative bg-[length:auto_150%] bg-center text-white font-sans h-screen flex items-end justify-center"
         style={{ backgroundImage: "url(./images/bg.jpg)" }}
       >
-        <div class="shadow-md overflow-hidden flex flex-col">
-          <div class="md:flex">
+        <div className="shadow-md overflow-hidden flex flex-col">
+          <div className="md:flex">
             {/* Mobile Logo */}
             <div className="absolute top-1/3 left-1/3 translate-x-2 -translate-y-5 lg:hidden">
               <img

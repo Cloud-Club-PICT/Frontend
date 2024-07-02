@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const MembersPage = () => {
   return (
-    <div class=" h-screen w-screen ">
+    <div className=" h-screen w-screen ">
       <h1 className="">Members Page</h1>
     </div>
   );

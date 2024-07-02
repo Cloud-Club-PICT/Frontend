@@ -6,6 +6,7 @@ import MembersPage from "../components/HomePage/Members";
 import Footer from "../components/HomePage/Footer";
 import AboutUsPage from "../components/HomePage/AboutUs";
 import LaunchpageMd from "../components/HomePage/Landing";
+
 const Home = () => {
   return (
     <div className="w-screen bg-gradient-to-b from-back-dark via-back-light to-back-dark ">

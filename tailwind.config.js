@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class',
+  lightMode: 'class',
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -32,7 +34,37 @@ export default {
           'blue': '#38bdf8'
         }
       },
+
+      //for staggered text -- className : "animate-animation_name" -- add opacity-0 to hid the elements before animation starts
+      keyframes : {
+        slidein : {
+          from : {
+            opacity : "0",
+            transform : "translateY(-10px)", //slightly above final position
+          },
+          to :{
+            opacity : "1",
+            transform : "translateY(0)",
+          },
+        },
+
+        zoom: {
+          '0%': { 'background-size': '100% 100%' },
+          '50%': { 'background-size': '120% 120%' },
+          '100%': { 'background-size': '100% 100%' },
+        },
+      },
+      //for staggered effect inrtoduce diffrent delays
+      animation :{
+        // slidein300 : "slidein 1s ease 300ms forwards",
+        // slidein500 : "slidein 1s ease 500ms forwards",
+        // slidein700 : "slidein 1s ease 700ms forwards",
+        slidein : "slidein 1s ease var(--slidein-delay, 0) forwards", //createv variable for delay(default value - 0) to avoid code duplication --> animate-slidein [--slidein-delay:300ms]
+        //specify forwards so that elements maintain their final positions
+        zoom: 'zoom 10s ease-in-out infinite'
+      },
     },
   },
   plugins: [],
 }
+

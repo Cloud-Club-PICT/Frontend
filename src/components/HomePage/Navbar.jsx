@@ -1,81 +1,62 @@
-import React, { useState, useEffect } from 'react';
-import { FiAlignJustify } from "react-icons/fi";
+import React, { useState } from "react";
 
 const Navbar = () => {
-  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768); // Adjust breakpoint as needed
-
-  useEffect(() => {
-    const handleResize = () => setIsLargeScreen(window.innerWidth >= 768);
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      const prevScrollPos = isNavbarVisible ? 0 : currentScrollPos;
-
-      setIsNavbarVisible(prevScrollPos < currentScrollPos);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
+  const [menu, setmenu] = useState("hidden");
+  const [menusrc, setmenusrc] = useState("images/menu.svg");
+  const handleClick = () => {
+    menu === "hidden" ? setmenu("flex") : setmenu("hidden");
+    menu === "hidden"
+      ? setmenusrc("/images/close.svg")
+      : setmenusrc("/images/menu.svg");
+  };
+  const navList = [
+    "Home",
+    "Product",
+    "Services",
+    "Why us",
+    "Resources",
+    "About",
+  ];
   return (
     <>
-      <div className="fixed top-0 left-0 w-full z-50">
-        <nav className={`fixed top-0 left-0 w-full z-50 bg-gray-800 bg-opacity-50 backdrop-filter backdrop-blur-md transition duration-300 p-4 ${
-          !isNavbarVisible ? 'hidden' : ''
-        }`}>
-          <div className="container mx-auto flex justify-between items-center">
-            <img
-              src="./images/logo_NoBg.png"
-              alt="AWS Logo"
-              className="h-12 w-auto filter drop-shadow-2xl"
-            />{" "}
-            {isLargeScreen ? (
-              <ul className="flex space-x-4">
-                <li>
-                  <a href="#" className="text-white text-lg  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#6A00FF] ">
-                    Home
-                  </a>
+      <div className=" w-[100vw] px-5 lg:px-10 flex h-[15vh] backdrop-blur-md   drop-shadow-2xl  lg:h-[15vh] ">
+        <div className="w-1/2 h-full  flex items-center">
+          <img className="h-[70%] " src="/images/logo_NoBg.svg" />
+        </div>
+        <div className="w-1/2  h-full flex justify-end items-center">
+          <img
+            onClick={handleClick}
+            className="invert lg:hidden"
+            src={menusrc}
+          />
+          <div className="w-full hidden  lg:block   h-full">
+            <ul className="w-full h-full justify-evenly items-center text-white font-mono  flex  ">
+              {navList.map((item, index) => (
+                <li
+                  className=" cursor-pointer hover:border-b-2 border-white transition-all"
+                  key={index}
+                >
+                  {item}
                 </li>
-                <li>
-                  <a href="#" className="text-white text-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#6A00FF]">
-                    About Us
-                  </a>
-                </li>
-                <li>
-              <a href="#" className="text-white text-lg  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#6A00FF]">
-                Events
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white text-lg  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#6A00FF]">
-                Blogs
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white text-lg transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#6A00FF]">
-                Members
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-white text-lg  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 hover:text-[#6A00FF]">
-                Contact Us
-              </a>
-            </li>
-              </ul>
-            ) : (
-              <span className='text-2xl text-white '>
-                <FiAlignJustify />
-              </span>
-            )}
-            
+              ))}
+            </ul>
           </div>
-        </nav>
+          x
+        </div>
+      </div>
+      <div className="absolute   w-[100vw] items-center  flex justify-end  ">
+        <ul
+          className={` ${menu} lg:hidden flex-col p-5 font-mono z-10 justify-evenly items-center text-lg m-5 backdrop-blur-3xl drop-shadow-2xl shadow-2xl   border border-gray-500 rounded-3xl w-1/4  `}
+        >
+          {navList.map((item, index) => (
+            <li
+              className="cursor-pointer text-white hover:border-b-2 border-white transition-all"
+              key={index}
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );

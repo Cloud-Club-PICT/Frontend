@@ -11,14 +11,14 @@ import {
 import PageNotFound from "./pages/PageNotFound";
 import Home from "./pages/Home";
 import Intro from "./pages/Intro";
-import Blogs from "./components/BlogsPage/BlogsCardPage.jsx";
+import BlogsPage from "./components/BlogsPage/BlogsPage.jsx";
 
 const router = new Router(
   createRoutesFromElements(
     <>
       <Route path="/" exact element={<Home />} />
       <Route path="/Intro" element={<Intro />} />
-      <Route path="/Blogs" element={<Blogs/>} />
+      <Route path="/Blogs" element={<BlogsPage/>} />
       <Route path="/*" element={<PageNotFound />} />
     </>
   )

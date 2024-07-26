@@ -1,174 +1,80 @@
-import React from "react";
-import { VscDebugBreakpointLogUnverified } from "react-icons/vsc";
-import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import Text from "./EventText";
+import { useInView } from 'react-intersection-observer'
 
-const colors = ["neo-green", "neo-blue", "neo-yellow", "neo-orange"];
-const colorsto = [
-  "to-neo-green",
-  "to-neo-blue",
-  "to-neo-yellow",
-  "to-neo-orange",
-];
-const colorsfrom = [
-  "from-neo-green",
-  "from-neo-blue",
-  "from-neo-yellow",
-  "from-neo-orange",
-];
-const colorstext = [
-  "text-neo-green",
-  "text-neo-blue",
-  "text-neo-yellow",
-  "text-neo-orange",
-];
+export default function Event() {
 
-const EventCard = ({ title, subtitle, description, imageUrl, index }) => (
-  <>
-    <div className="basis-6/12 h-fit rounded-xl relative self-center shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)]">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 3 }}
-      >
-        <div className="relative flex bg-clip-border rounded-xl p-6 bg-gray-800 border-gray-700 hover:bg-gray-700 shadow-md w-full flex-row">
-          <div className="relative w-2/5 m-0 overflow-hidden  rounded-r-none bg-clip-border rounded-xl shrink-0">
-            <img
-              src={imageUrl}
-              alt={`${title} image`}
-              className="object-cover w-full h-full"
-            />
-          </div>
-          <div className="p-6">
-            <h6 className="block mb-4 font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-gray-400 uppercase">
-              {title}
-            </h6>
-            <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-white">
-              {subtitle}
-            </h4>
-            <p className="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-gray-400">
-              {description}
-            </p>
-            <a href="#" className="inline-block">
-              <button
-                className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-gray-200 uppercase align-middle transition-all rounded-lg select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none hover:bg-gray-900/10 active:bg-gray-900/20"
-                type="button"
-              >
-                Learn More
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  className="w-4 h-4"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                  ></path>
-                </svg>
-              </button>
-            </a>
-          </div>
-        </div>
-      </motion.div>
-    </div>
-    <div
-      className={
-        "basis-1/12 flex flex-col  items-center gap-1" + `text-${colors[index]}`
-      }
-    >
-      <div
-        className={
-          "w-1 bg-gradient-to-b h-full " +
-          (index === 0 ? " from-transparent " : ` from-${colors[index]} `) +
-          ` to-${colors[index]} `
+    const [imglink, setImglink] = useState('https://secure.meetupstatic.com/photos/event/4/4/2/0/600_520517440.webp?w=384')
+
+    const [myref1, visible1] = useInView({ threshold: 0.5 })
+    const [myref2, visible2] = useInView({ threshold: 0.5 })
+
+    useEffect(() => {
+        if (visible1) {
+            setImglink('https://secure.meetupstatic.com/photos/event/4/4/2/0/600_520517440.webp?w=384')
         }
-      ></div>
-      <VscDebugBreakpointLogUnverified
-        size="5rem"
-        className={`text-${colors[index]}`}
-      />
-      <div
-        className={
-          "w-1 bg-gradient-to-b h-full " +
-          (index === 5 ? "" : ` to-${colors[index + 1]} `) +
-          ` from-${colors[index]} `
+        if (visible2) {
+            setImglink('https://secure.meetupstatic.com/photos/event/6/d/b/1/600_520408081.webp?w=384')
         }
-      ></div>
-    </div>
-  </>
-);
+    }, [visible1, visible2])
 
-const events = [
-  {
-    title: "Events",
-    subtitle: "Something Something",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iste, fugiat officiis eligendi ad vero perspiciatis, porro maiores distinctio, harum ipsum eos quo corrupti nobis debitis laborum. Excepturi, fugit sequi.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=1471&amp;q=80",
-  },
-  {
-    title: "Events 2",
-    subtitle: "Something Something",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iste, fugiat officiis eligendi ad vero perspiciatis, porro maiores distinctio, harum ipsum eos quo corrupti nobis debitis laborum. Excepturi, fugit sequi.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "Events 2",
-    subtitle: "Something Something",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iste, fugiat officiis eligendi ad vero perspiciatis, porro maiores distinctio, harum ipsum eos quo corrupti nobis debitis laborum. Excepturi, fugit sequi.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    title: "Events 2",
-    subtitle: "Something Something",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci iste, fugiat officiis eligendi ad vero perspiciatis, porro maiores distinctio, harum ipsum eos quo corrupti nobis debitis laborum. Excepturi, fugit sequi.",
-    imageUrl:
-      "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-];
 
-const EventsPage = () => {
-  const { ref, inView, entry } = useInView({
-    threshold: 0,
-  });
-  console.log(inView);
-  return (
-    <React.Fragment>
-      <div className="flex flex-col">
-        <h1 className="text-text-200 text-[3rem] font-bold self-center">
-          Events :{" "}
-          <p className="inline bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
-            Meet
-          </p>{" "}
-          with us...
-        </h1>
-      </div>
-      {events.map((element, index) => (
-        <div className="h-screen w-screen flex flex-col">
-          <div ref={ref} className="flex flex-1 justify-center gap-4">
-            <EventCard
-              title={element.title}
-              subtitle={element.subtitle}
-              description={element.description}
-              imageUrl={element.imageUrl}
-              index={index}
-            />
-          </div>
-        </div>
-      ))}
-      {/* Break */}
-    </React.Fragment>
-  );
-};
 
-export default EventsPage;
+    return (
+        <>
+            <div className="h grid-cols-2 flex justify-around w-full  text-white"
+                style={{ scrollBehavior: "smooth", gap: "3.5vw" }}>
+                <div className="block text-sm md:w-full relative md:text-m " style={{ marginLeft: "6vw" }}>
+
+                    <div ref={myref1} className={`flex flex-wrap w-full h-screen `}>
+
+                        <div className="md:hidden block justify-center w-full " style={{ marginRight: '8vw' }}>
+                            <div className="rounded-3xl overflow-auto flex justify-center align-middle" style={{ objectFit: 'contain', height: "30vh", marginTop: '10vh', boxShadow: "rgb(255 90 255 / 50%) 0px 0px 300px" }}>
+                                <img src='https://secure.meetupstatic.com/photos/event/4/4/2/0/600_520517440.webp?w=384'></img>
+                            </div>
+                        </div>
+
+                        <Text title='ON-PREM V/S CLOUD' subtitle='A Virtualization Worshop' date='22th April 2024' content='This interactive workshop aims to understand the concepts of Virtualization, offering hands-on projects on Virtualization, both locally and on the cloud.
+                            Understand how to set up virtual machines, configure the networks and resource optimization while performing deployment of a website.' link="https://www.meetup.com/aws-cloud-club-at-pict/events/300534045/" linkText="Visit MeetUp" transp={visible1} />
+
+
+                    </div>
+
+
+                    <div ref={myref2} className={`flex flex-wrap w-full h-screen `}>
+
+                        <div className="md:hidden block justify-center w-full " style={{ marginRight: '8vw' }}>
+                            <div className="rounded-3xl overflow-auto flex justify-center align-middle" style={{ objectFit: 'contain', height: "30vh", marginTop: '5vh', boxShadow: "rgb(255 90 255 / 50%) 0px 0px 300px" }}>
+                                <img src='https://secure.meetupstatic.com/photos/event/6/d/b/1/600_520408081.webp?w=384'></img>
+                            </div>
+                        </div>
+
+                        <Text title='Unlocking Cloud Computing ' subtitle='Introduction to AWS Cloud Club PICT' date="16th April 2024" content='This introductory session is dedicated to exploring the concepts of cloud computing, uncovering the benefits of joining the cloud club, and discussing upcoming events and future aspirations.Join us as we break down the complexities of cloud technology, highlight the opportunities available through our club, and outline our vision for exciting journey ahead.' link="https://www.meetup.com/aws-cloud-club-at-pict/events/300417318/" linkText="Visit MeetUp" transp={visible2} />
+
+
+                    </div>
+                </div>
+
+                <div className="hidden overflow-visible md:grid grid-cols-1 " style={{ width: '5vw', height: "100vh", paddingTop: "10vh", justifyContent: 'center' }}>
+
+                    <div className="bg-gradient-to-b from-green-500 to-blue-500  rounded-xl m-auto" style={{ width: "0.5vh", height: "40vh" }}></div>
+
+                    <div className="bg-black/0 border-blue-500 m-auto" style={{ width: "2vh", height: "2vh", marginTop: "2vh", rotate: "45deg", borderWidth: "0.3vh" }}></div>
+
+                    <div className="bg-gradient-to-b from-blue-500 to-green-500  rounded-xl m-auto" style={{ width: "0.5vh", height: "90vh", marginTop: "2vh" }}></div>
+
+                    <div className="bg-black/0 border-green-500 m-auto" style={{ width: "2vh", height: "2vh", marginTop: "2vh", translate: ' 0', rotate: "45deg", borderWidth: "0.3vh" }}></div>
+
+                    <div className="bg-gradient-to-b from-green-500 to-blue-500 rounded-xl m-auto" style={{ width: "0.5vh", height: "40vh", marginTop: "2vh" }}></div>
+
+                </div>
+
+                <div className="hidden md:block justify-center w-full mr-14" >
+                    <div className="rounded-3xl sticky top-1/4  overflow-auto flex justify-center align-middle" style={{ objectFit: 'contain', height: "45vh", marginBottom: "27vh", marginTop: "27vh", boxShadow: "rgb(255 90 255 / 50%) 0px 0px 300px" }}>
+                        <img src={imglink}></img>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+}

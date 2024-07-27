@@ -8,10 +8,9 @@ const BlogsPage = () => {
   // State to track selected category
   const [selectedCategory, setSelectedCategory] = useState(uniqueCategories[0]); // Initialize with the first category
 
-  // Filter blogs based on selected category
   const filteredBlogs = BlogData.filter(
     (blog) => blog.category === selectedCategory
-  );
+  ).slice(0, 3); // Get only top 3 blogs
 
   // Function to handle category selection
   const handleCategoryChange = (category) => {
@@ -19,9 +18,9 @@ const BlogsPage = () => {
   };
 
   return (
-    <div className="h-screen w-screen">
+    <div className=" w-screen">
       <div className="flex flex-col">
-        <h1 className="text-text-200 text-[3rem] font-bold self-center">
+        <h1 className="text-text-200 text-[2rem] sm:text-[3rem] font-bold text-center">
           Blogs :{" "}
           <p className="inline bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text">
             Meet

@@ -3,6 +3,7 @@ import BlogData from "../../JSON/BlogData";
 import { TERipple } from 'tw-elements-react'; // npm i tw-elements-react
 import { Typography } from "@material-tailwind/react";
 import Tilt from "react-parallax-tilt"; // npm i react-parallax-tilt
+import { Link } from "react-router-dom";
 
 const BlogsPage = () => {
   // Extracting unique categories from BlogData
@@ -89,7 +90,10 @@ const BlogsPage = () => {
                 </div>
               </>
             )}
+            
             {filteredBlogs.slice(1).map((blog, index) => (
+              
+              <Link to= {`/blogs/${blog.id}`}>
               <Tilt key={index}>
                 <div className="relative flex items-center justify-center max-w-xs flex-wrap z-10 pt-5">
                   <div className="relative max-w-xs rounded-2xl max-w-xs rounded-2xl shadow-[10px_10px_20px_rgba(0,0,0,0.3)] bg-white dark:bg-gray-800 overflow-hidden m-6 backdrop-blur-[5px] cursor-pointer transition duration-300 hover:shadow-xl">
@@ -118,6 +122,7 @@ const BlogsPage = () => {
                   </div>
                 </div>
               </Tilt>
+              </Link>
             ))}
           </>
         )}

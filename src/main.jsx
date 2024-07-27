@@ -12,6 +12,7 @@ import PageNotFound from "./pages/PageNotFound";
 import Home from "./pages/Home";
 import Intro from "./pages/Intro";
 import BlogsPage from "./components/BlogsPage/BlogsPage.jsx";
+import Single from './pages/Single'; 
 
 const router = new Router(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = new Router(
       <Route path="/" exact element={<Home />} />
       <Route path="/Intro" element={<Intro />} />
       <Route path="/Blogs" element={<BlogsPage/>} />
+      <Route path="/blogs/:id" element={<Single />} />
       <Route path="/*" element={<PageNotFound />} />
     </>
   )

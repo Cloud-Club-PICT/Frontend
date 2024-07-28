@@ -1,12 +1,12 @@
 const BlogData = [
   {
-    "title": "The Future of Technology",
+    "title": "The Future of Technology in the hand of human The Future of Technology in the hand of human",
     "username": "Jane Doe",
-    "blogImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfObc0AwNYaWj5OT22RHOQLa7L-TEN40hR8w&s",
+    "blogImg": "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_aws.jpg",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea iusto impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas a odit modi eos! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea iusto impedit! Voluptatum necessi",
     "userImg": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg",
     "publishDate": "2024-06-29",
-    "category": "AI",
+    "category": "ML",
     "id": "1",
     "content": [
       {
@@ -23,7 +23,7 @@ const BlogData = [
   {
     "title": "Healthy Eating: Tips and Tricks",
     "username": "John Smith",
-    "blogImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfObc0AwNYaWj5OT22RHOQLa7L-TEN40hR8w&s",
+    "blogImg": "https://cloud2data.com/wp-content/uploads/2024/07/AWS-Bedrock-2.jpg",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea iusto impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas a odit modi eos! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea iusto impedit! Voluptatum necessi",
     "userImg": "https://images.pexels.com/photos/951408/pexels-photo-951408.jpeg?auto=compress&cs=tinysrgb&w=600",
     "publishDate": "2024-06-25",
@@ -66,7 +66,7 @@ const BlogData = [
     "title": "Exploring the World: Top Travel Destinations",
     "username": "Emily Johnson",
     "userImg": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg",
-    "blogImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfObc0AwNYaWj5OT22RHOQLa7L-TEN40hR8w&s",
+    "blogImg": "https://cloud2data.com/wp-content/uploads/2024/07/AWS-Bedrock-2.jpg",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea iusto impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas a odit modi eos! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea iusto impedit! Voluptatum necessi",
     "publishDate": "2024-06-20",
     "category": "Web",
@@ -108,7 +108,7 @@ const BlogData = [
     "title": "The Future of Technology",
     "username": "Jane Doe",
     "userImg": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg",
-    "blogImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfObc0AwNYaWj5OT22RHOQLa7L-TEN40hR8w&s",
+    "blogImg": "https://cloud2data.com/wp-content/uploads/2024/07/AWS-Bedrock-2.jpg",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea iusto impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas a odit modi eos! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea iusto impedit! Voluptatum necessi",
     "publishDate": "2024-06-29",
     "category": "AI",
@@ -129,7 +129,7 @@ const BlogData = [
     "title": "The Future of Technology",
     "username": "Jane Doe",
     "userImg": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg",
-    "blogImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfObc0AwNYaWj5OT22RHOQLa7L-TEN40hR8w&s",
+    "blogImg": "https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200706231831/AWS-2.png",
     "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea iusto impedit! Voluptatum necessitatibus eum beatae, adipisci voluptas a odit modi eos! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste error quibusdam ipsa quis quidem doloribus eos, dolore ea iusto impedit! Voluptatum necessi",
     "publishDate": "2024-06-29",
     "category": "AI",
@@ -148,7 +148,7 @@ const BlogData = [
   },
 
   {
-    "title": "The Future of Technology",
+    "title": "The Future of Technology in the hand of human",
     "username": "Jane Doe",
     "userImg": "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?cs=srgb&dl=pexels-simon-robben-55958-614810.jpg&fm=jpg",
     "blogImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfObc0AwNYaWj5OT22RHOQLa7L-TEN40hR8w&s",

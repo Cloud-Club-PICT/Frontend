@@ -1,17 +1,23 @@
 import BlogsPage from "../components/HomePage/Blogs";
-import Navbar from "../components/HomePage/Navbar";
 import ContactUsPage from "../components/HomePage/ContactUs/ContactUs";
 import EventsPage from "../components/HomePage/Events";
 import MembersPage from "../components/HomePage/Members";
 import Footer from "../components/HomePage/Footer";
 import AboutUsPage from "../components/HomePage/AboutUs";
-import LaunchpageMd from "../components/HomePage/Landing";
+import Landing1 from "../components/HomePage/Landing1";
 
 const Home = () => {
   return (
     <div className="w-screen bg-gradient-to-b from-back-dark via-back-light to-back-dark ">
-      <Navbar />
-      <LaunchpageMd />
+      <video
+        loop
+        muted
+        autoPlay
+        className=" absolute h-screen w-screen object-cover -z-3 opacity-20"
+      >
+        <source src="/bg.mkv" />
+      </video>
+      <Landing1 />
       <AboutUsPage />
       <EventsPage />
       <BlogsPage />

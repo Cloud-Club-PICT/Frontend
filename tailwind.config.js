@@ -11,7 +11,8 @@ export default {
       colors: {
         'back': {
           'light': '#072446',
-          'dark': '#060717'
+          'dark': '#060717',
+          'extralight':'#1363c3'
         },
         'text-200': '#e0e0e0',
         'primary': {

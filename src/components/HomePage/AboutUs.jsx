@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const AboutUsPage = () => {
   const imageStyle = {
@@ -9,7 +10,7 @@ const AboutUsPage = () => {
   };
 
   return (
-    <div className="min-h-screen w-full flex flex-col items-center justify-center text-white p-5 overflow-hidden">
+    <div className="min-h-screen w-full flex flex-col items-center justify-center text-black p-5 overflow-hidden">
       <div className="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
           <div className="max-w-lg flex flex-col">
@@ -33,19 +34,26 @@ const AboutUsPage = () => {
               </ul>
             </p>
             <div className="mt-8">
-              <a href="#" className="text-blue-500 hover:text-blue-600 font-medium">
-                Learn more about us
+              <Link href="#" className="text-blue-500 hover:text-blue-600 font-medium">
+                Join Meetup
                 <span className="ml-2">&#8594;</span>
-              </a>
+              </Link>
             </div>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              "https://images.pexels.com/photos/4069290/pexels-photo-4069290.jpeg",
-              "https://images.pexels.com/photos/2102416/pexels-photo-2102416.jpeg",
-              "https://images.pexels.com/photos/4065621/pexels-photo-4065621.jpeg",
+              "https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg",
+
+              "https://images.pexels.com/photos/1595392/pexels-photo-1595392.jpeg",
+              "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
+              "https://images.pexels.com/photos/3182763/pexels-photo-3182763.jpeg",
+       
+
             ].map((src, index) => (
-              <div className="relative group aspect-w-1 aspect-h-1" key={index}>
+              <div
+                className={`relative group aspect-w-1 aspect-h-1 w-full ${index % 2 === 0 ? "sm:transform sm:translate-y-8" : "sm:transform sm:-translate-y-8"}`}
+                key={index}
+              >
                 <img
                   src={src}
                   alt={`About Us Image ${index + 1}`}
@@ -63,3 +71,4 @@ const AboutUsPage = () => {
 };
 
 export default AboutUsPage;
+

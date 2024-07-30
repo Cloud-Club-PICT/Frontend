@@ -8,17 +8,16 @@
   font-family: "Title";
   src: url("/Bayon.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Amz";
+  src: url("/AmazonEmberDisplay_Bd.ttf") format("truetype");
+}
 ::-webkit-scrollbar {
   width: 0px;
 }
-
-#glass {
-  backdrop-filter: blur(7px) saturate(180%);
-  /* -webkit-backdrop-filter: blur(16px) saturate(180%); */
-  background-color: rgba(167, 159, 159, 0.45);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.411);
-}
 .Title {
   font-family: "Title";
+}
+.Amz {
+  font-family: "Amz";
 }

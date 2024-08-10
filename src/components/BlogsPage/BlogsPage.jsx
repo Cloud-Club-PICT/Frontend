@@ -81,7 +81,7 @@ const BlogsPage = () => {
               />
             </div>
 
-            <h3 className="text-2xl text-gray-900 font-bold py-4">
+            <h3 className="text-xl sm:text-2xl text-gray-900 font-bold py-4">
               {blog.title}
             </h3>
 

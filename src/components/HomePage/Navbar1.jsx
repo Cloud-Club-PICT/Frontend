@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
+
+
 const Navbar1 = () => {
   const [menu, setmenu] = useState("/images/menu.svg");
   const [ham, setham] = useState("flex");
@@ -74,9 +77,11 @@ const Navbar1 = () => {
             </div>
             {/* Button */}
             <div className="w-1/4 h-full flex justify-end ">
+            <Link to="https://www.meetup.com/aws-cloud-club-at-pict/">
               <button className="bg-black hidden lg:block text-white rounded-3xl  lg:h-full lg:px-5 text-xs px-4 hover:bg-gray-800 hover:scale-110 transition-all">
                 Join US
               </button>
+              </Link>
               <div className="w-full lg:hidden  h-full flex justify-end items-center">
                 <img
                   onClick={handleClick}

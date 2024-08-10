@@ -359,35 +359,38 @@ const TeamSection = ({ title, members }) => {
         >
           {title}
         </h2>
-        <div className="flex flex-wrap justify-center gap-10">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
           {members.map((member, index) => (
-            <div key={index} className="flex flex-col items-center">
+            <div
+              key={index}
+              className="flex flex-col items-center sm:w-60 sm:h-80 rounded-lg overflow-hidden"
+            >
               <img
-                className="object-cover w-24 h-24 sm:w-36 sm:h-36 mb-2 rounded-full shadow border border-back-extralight"
+                className="object-cover w-16 h-16 sm:w-36 sm:h-36 mb-2 rounded-full shadow border border-back-extralight"
                 src={member.image}
                 alt={member.name}
               />
-              <div className="flex flex-col items-center">
-              <p className="text-md sm:text-lg font-bold text-gray-200">{member.name}</p>
-                <p className="text-sm text-gray-300">{member.role}</p>
-              </div>
-              <div className="mt-4 flex justify-center gap-4">
-                <a
-                  href={member.social.gitHub}
-                  className="text-neo-yellow"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaGithub size={24} />
-                </a>
-                <a
-                  href={member.social.linkedin}
-                  className="text-neo-blue"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FaLinkedin size={24} />
-                </a>
+              <div className="flex flex-col items-center p-4 flex-grow">
+              <p className="text-sm sm:text-lg font-bold text-gray-200">{member.name}</p>
+              <p className="text-xs text-gray-300">{member.role}</p>
+                <div className="mt-4 flex justify-center gap-4">
+                  <a
+                    href={member.social.gitHub}
+                    className="text-neo-coral hover:text-black"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub size={24} />
+                  </a>
+                  <a
+                    href={member.social.linkedin}
+                    className="text-neo-blue hover:text-blue-700"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaLinkedin size={24} />
+                  </a>
+                </div>
               </div>
             </div>
           ))}

@@ -14,7 +14,7 @@ export default function SinglePost({ post }) {
     <div className="w-screen min-h-screen bg-gray-100 py-10 px-5">
       <div className="w-full max-w-6xl mx-auto">
         <div className="relative bg-white">
-          <div className="text-5xl font-extrabold mb-4 capitalize text-center p-4 rounded-lg shadow-md">
+          <div className="text-3xl sm:text-5xl font-extrabold mb-4 capitalize text-center p-4 rounded-lg shadow-md">
             {post.title}
             <img src={post.blogImg} className="my-5" />
           </div>
@@ -31,11 +31,11 @@ export default function SinglePost({ post }) {
               src={post.userImg}
               alt={post.username}
             />
-            <span className="text-gray-800 text-lg font-semibold">
+            <span className="text-gray-800 text-sm sm:text-lg font-semibold">
               {post.username}
             </span>
           </div>
-          <div className="text-sm text-gray-600">
+          <div className="text-xs sm:text-sm text-gray-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -88,7 +88,7 @@ export default function SinglePost({ post }) {
               return (
                 <h2
                   key={index}
-                  className="text-3xl font-bold text-gray-900 mb-4"
+                  className="text-xl sm:text-3xl font-bold text-gray-900 mb-4"
                   style={{ fontFamily: '"Playfair Display", serif' }}
                 >
                   {item.text}

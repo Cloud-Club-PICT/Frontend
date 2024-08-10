@@ -93,7 +93,7 @@ const Landing1 = () => {
   return (
     <div
       id="Landing"
-      className="w-screen h-screen flex flex-col overflow-hidden "
+      className="w-screen flex flex-col overflow-hidden "
     >
       <div id="Nav" className="h-[15vh] w-screen z-10">
         <Navbar1 />

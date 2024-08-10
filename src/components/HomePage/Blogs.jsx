@@ -53,6 +53,7 @@ const BlogsPage = () => {
           <p className="text-gray-600 text-center">No blogs found for selected category.</p>
         ) : (
           filteredBlogs.map((blog, index) => (
+            <Link to={`/blogs/${blog.id}`} >
             <div key={index} className="max-w-xs w-full sm:max-w-sm h-[20rem] sm:h-[26rem] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-700 flex flex-col justify-between">
               <div className="w-full h-40 sm:h-48 overflow-hidden bg-clip-border rounded-t-lg">
                 <img src={blog.blogImg} className="object-cover w-full h-full" alt="Blog" />
@@ -77,6 +78,7 @@ const BlogsPage = () => {
                 </div>
               </div>
             </div>
+            </Link>
           ))
         )}
       </div>

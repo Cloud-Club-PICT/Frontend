@@ -21,7 +21,7 @@ const AboutUsPage = () => {
               </span>{" "}
               are We?
             </h1>
-            <p className="mt-4 text-gray-600 text-lg">
+            <p className="mt-4 text-gray-300 text-lg">
               AWS Cloud Club PICT is a student-driven community club that engages cloud beginners, enthusiasts, and interested folks to explore Cloud Computing and Amazon Web Services (AWS).
               <br />
               <br />
@@ -34,7 +34,7 @@ const AboutUsPage = () => {
               </ul>
             </p>
             <div className="mt-8">
-              <Link href="#" className="text-blue-500 hover:text-blue-600 font-medium">
+              <Link to="https://www.meetup.com/aws-cloud-club-at-pict/" className="text-blue-500 hover:text-blue-600 font-medium">
                 Join Meetup
                 <span className="ml-2">&#8594;</span>
               </Link>

@@ -21,7 +21,7 @@ const router = new Router(
       <Route path="/" exact element={<Home />} />
       <Route path="/Intro" element={<Intro />} />
       <Route path="/Blogs" element={<BlogsPage/>} />
-      <Route path="/AddBlog" element={<AddPost/>} />
+      {/* <Route path="/AddBlog" element={<AddPost/>} /> */}
       <Route path="/blogs/:id" element={<Single />} />
       <Route path="/*" element={<PageNotFound />} />
     </>

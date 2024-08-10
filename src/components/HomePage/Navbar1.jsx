@@ -42,11 +42,10 @@ const Navbar1 = () => {
 
   const navList = [
     "Home",
-    "Product",
-    "Services",
-    "Why us",
-    "Resources",
     "About",
+    "Events",
+    "Blogs",
+    "Contact Us",
   ];
   return (
     <div className="w-[100vw] overflow-x-hidden   ">
@@ -76,7 +75,7 @@ const Navbar1 = () => {
             {/* Button */}
             <div className="w-1/4 h-full flex justify-end ">
               <button className="bg-black hidden lg:block text-white rounded-3xl  lg:h-full lg:px-5 text-xs px-4 hover:bg-gray-800 hover:scale-110 transition-all">
-                Explore
+                Join US
               </button>
               <div className="w-full lg:hidden  h-full flex justify-end items-center">
                 <img

@@ -1,19 +1,29 @@
-import { useNavigate } from "react-router-dom";
+import BlogsPage from "../components/HomePage/Blogs";
+import ContactUsPage from "../components/HomePage/ContactUs/ContactUs";
+import EventsPage from "../components/HomePage/Events";
+import MembersPage from "../components/HomePage/Members";
+import Footer from "../components/HomePage/Footer";
+import AboutUsPage from "../components/HomePage/AboutUs";
+import Landing1 from "../components/HomePage/Landing1";
 
 const Home = () => {
-  const navigate = useNavigate();
-
   return (
-    <div
-      className="relative bg-cover bg-center bg-no-repeat text-white font-sans h-[91vh] w-auto flex items-end justify-center"
-      style={{ backgroundImage: "url(./images/AWS_Background.jpeg)" }}
-    >
-      <button
-        onClick={() => navigate("/Intro")}
-        className="bg-yellow-500 text-blue-900 px-7 py-3 rounded hover:bg-yellow-600 mb-10"
+    <div className="w-screen bg-gradient-to-b from-back-dark via-back-light to-back-dark ">
+      <video
+        loop
+        muted
+        autoPlay
+        className=" absolute h-screen w-screen object-cover -z-3 opacity-20"
       >
-        Join Us
-      </button>
+        <source src="/bg.mkv" />
+      </video>
+      <Landing1 />
+      <AboutUsPage />
+      <EventsPage />
+      <BlogsPage />
+      <MembersPage />
+      <ContactUsPage />
+      <Footer />
     </div>
   );
 };

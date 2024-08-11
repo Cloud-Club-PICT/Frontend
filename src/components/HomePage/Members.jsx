@@ -317,7 +317,7 @@ const techTeam = [
   {
     name: "Girish Kale",
     role: "Technical Team Member",
-    image: "/images/AWS CC PICT- Member images/Technical Team/Girish Kale.JPG",
+    image: "/images/AWS CC PICT- Member images/Technical Team/Girish Kale.jpg",
     social: {
       gitHub: "https://github.com/girishk1911",
       linkedin: "https://www.linkedin.com/in/girish-kale-85a118256",

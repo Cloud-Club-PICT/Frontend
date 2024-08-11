@@ -374,7 +374,7 @@ const TeamSection = ({ title, members }) => {
                 <p className="text-xs sm:text-lg font-bold text-gray-200 flex-1 sm:flex-none">
                   {member.name}
                 </p>
-                <p className="text-xs sm:text-md text-gray-300 line-clamp-1 sm:line-clamp-2">
+                <p className="text-xs sm:text-md text-gray-300  sm:line-clamp-2">
                   {member.role}
                 </p>
                 <div className="mt-4 flex justify-center gap-4">

@@ -21,7 +21,7 @@ const AboutUsPage = () => {
               </span>{" "}
               are We?
             </h1>
-            <p className="mt-4 text-gray-300 text-lg">
+            <p className="mt-4 text-gray-300 text-md sm:text-lg">
               AWS Cloud Club PICT is a student-driven community club that engages cloud beginners, enthusiasts, and interested folks to explore Cloud Computing and Amazon Web Services (AWS).
               <br />
               <br />

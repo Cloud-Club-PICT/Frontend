@@ -1,8 +1,13 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React ,{useEffect}from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function SinglePost({ post }) {
   const navigate = useNavigate();
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   // Function to format the date
   const formatDate = (dateString) => {

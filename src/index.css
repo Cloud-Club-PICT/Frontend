@@ -21,3 +21,6 @@
 .Amz {
   font-family: "Amz";
 }
+.body{
+  scroll-behavior: smooth;
+}

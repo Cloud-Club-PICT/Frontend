@@ -79,8 +79,8 @@ export default function Event() {
                     <br /><i style={{textShadow:'0px 0px 10px'}}>At the end of the bootcamp, attendees can claim their certification proving their knowledge on AWS Fundamentals.</i>
                   </>
                 }
-                link="https://www.linkedin.com/posts/aws-cloud-club-pict_aws-awsfundamentals-awscloudclubs-activity-7226473118922416128-eRNF/?utm_source=share&utm_medium=member_desktop"
-                linkText="Visit LinkedIn"
+                link="https://www.meetup.com/aws-cloud-club-at-pict/events/302665177/"
+                linkText="Visit Meetup"
                 transp={visible1}
               />
             </div>
@@ -240,7 +240,7 @@ export default function Event() {
             >
               <img src={imglink} className=""></img>
             </div>
-          </div>
+          </div> 
         </div>
       </div>
     </>

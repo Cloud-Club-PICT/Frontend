@@ -1,8 +1,14 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import BlogData from "../../JSON/BlogData";
+import { useLocation } from "react-router-dom";
 
 const BlogsPage = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   // Extracting unique categories from BlogData and adding "ALL"
   const uniqueCategories = [
     "ALL",

@@ -12,7 +12,7 @@ export default function Text({ title, subtitle, date, content, link, linkText, t
                     </div>
                 </div></b>
                 <div className="w-full md:text-xl"><p>{content}</p></div>
-                <div className="text-gray-400 my-3 text-2xl font-bold ">
+                <div className="text-gray-400 my-3  text-lg sm:text-2xl font-bold ">
                         <span className="text-neo-pink">Conducted on:</span> {date}
                 </div>
                 <a target="_blank" className={`group text-m hover:text-purple-500 text-blue-700 opacity-90 transition-all duration-300 ease-in-out text-neutral-${transp ? 0 : 950}`} href={link}>

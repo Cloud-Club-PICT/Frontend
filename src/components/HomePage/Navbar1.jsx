@@ -64,7 +64,7 @@ const Navbar1 = () => {
             </div>
             {/* nav */}
             <div className="w-1/2 h-full">
-              <ul className=" hidden lg:flex justify-evenly items-center h-full font-mono transition-all  ">
+              <ul className="text-lg font-semibold hidden lg:flex justify-evenly items-center h-full transition-all  " style={{fontFamily: "Montserrat, sans-serif"}}>
                 {navList.map((item, index) => (
                   <li
                     key={index}
@@ -78,7 +78,7 @@ const Navbar1 = () => {
             {/* Button */}
             <div className="w-1/4 h-full flex justify-end ">
             <Link to="https://www.meetup.com/aws-cloud-club-at-pict/">
-              <button className="bg-black hidden lg:block text-white rounded-3xl  lg:h-full lg:px-5 text-xs px-4 hover:bg-gray-800 hover:scale-110 transition-all">
+              <button className="bg-black hidden lg:block text-white text-md rounded-3xl  lg:h-full lg:px-5  px-4 hover:bg-gray-800 hover:scale-110 transition-all">
                 Join US
               </button>
               </Link>

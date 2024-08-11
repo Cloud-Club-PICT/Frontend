@@ -106,10 +106,11 @@ const Landing1 = () => {
             className="h-full object-contain robo1"
           />
         </div>
+
         <div className="w-full h-full lg:hidden flex flex-col ">
           <h1
             id="mbAWS"
-            className="text-white Amz   text-[140px]  text-center "
+            className="text-white Amz text-[140px]  text-center "
           >
             aws
           </h1>
@@ -120,7 +121,7 @@ const Landing1 = () => {
             Cloud Club PICT
           </h1>
 
-          <div id="para" className="w-full text-white text-lg font-mono ">
+          <div id="para" className="w-full text-white text-md sm:text-lg font-poppins ">
             <p className="text-justify p-5">
               AWS Cloud Club PICT is a student community at Pune Institute of
               Computer Technology (PICT) that focuses on cloud computing using
@@ -144,7 +145,7 @@ const Landing1 = () => {
           >
             Cloud Club PICT
           </h1>
-          <div id="para" className="w-full text-white text-lg font-mono ">
+          <div id="para" className="w-full text-white text-lg font-poppins">
             <p className="text-justify p-5">
               AWS Cloud Club PICT is a student community at Pune Institute of
               Computer Technology (PICT) that focuses on cloud computing using

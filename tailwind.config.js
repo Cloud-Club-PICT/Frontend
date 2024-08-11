@@ -64,6 +64,10 @@ export default {
         //specify forwards so that elements maintain their final positions
         zoom: 'zoom 10s ease-in-out infinite'
       },
+      fontFamily: {
+        playfair: ['Playfair Display', 'serif'],
+        poppind : [ 'Poppins', 'sans-serif']
+      },
     },
   },
   plugins: [],

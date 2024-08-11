@@ -363,16 +363,20 @@ const TeamSection = ({ title, members }) => {
           {members.map((member, index) => (
             <div
               key={index}
-              className="flex flex-col items-center sm:w-60 sm:h-80 rounded-lg overflow-hidden"
+              className="flex flex-col items-center sm:w-60 sm:h-80 w-32  rounded-lg overflow-hidden"
             >
               <img
                 className="object-cover w-16 h-16 sm:w-36 sm:h-36 mb-2 rounded-full shadow border border-back-extralight"
                 src={member.image}
                 alt={member.name}
               />
-              <div className="flex flex-col items-center p-4 flex-grow">
-              <p className="text-sm sm:text-lg font-bold text-gray-200">{member.name}</p>
-              <p className="text-xs text-gray-300">{member.role}</p>
+              <div className="flex flex-col items-center  sm:p-4 p-2 flex-grow text-center">
+                <p className="text-xs sm:text-lg font-bold text-gray-200 flex-1 sm:flex-none">
+                  {member.name}
+                </p>
+                <p className="text-xs sm:text-md text-gray-300 line-clamp-1 sm:line-clamp-2">
+                  {member.role}
+                </p>
                 <div className="mt-4 flex justify-center gap-4">
                   <a
                     href={member.social.gitHub}
@@ -463,17 +467,21 @@ const Members = () => {
           "designTeam",
           "documentation",
           "sponsorship",
-        ].map((category) => (
+        ].map((category,index) => (
           <button
-            key={category}
+            key={index}
             onClick={() => handleCategoryChange(category)}
-            className={`py-2.5 px-5 sm:me-3 md:me-4 text-sm font-medium rounded-full border border-gray-200 hover:bg-gray-100 focus:outline-none focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 ${
-              activeCategory === category
-                ? "text-gray-100 bg-gradient-to-r from-back-dark to-back-extralight dark:border-blue-700"
-                : "text-gray-800 dark:text-gray-200 hover:text-gray-800 dark:hover:text-gray-200 hover:border-back-extralight"
-            }`}
+            className="bg-gray-800 no-underline group cursor-pointer relative shadow-2xl shadow-gray-900 rounded-full p-px text-sm font-semibold leading-6 text-white inline-block"
           >
-            {category.replace(/([A-Z])/g, " $1").toUpperCase()}
+            <span className="absolute inset-0 overflow-hidden rounded-full">
+              <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(17,24,39,0.6)_0%,rgba(17,24,39,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            </span>
+            <div
+              className={`relative flex space-x-2 items-center z-10 rounded-full py-1 px-6 ring-1 ring-white/10 ${activeCategory === category ? "bg-gray-950" : "bg-gray-900"}`}
+            >
+              <span>{category.replace(/([A-Z])/g, " $1").toUpperCase()}</span>
+            </div>
+            <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
           </button>
         ))}
       </div>
@@ -481,12 +489,17 @@ const Members = () => {
       <div className="md:hidden relative mb-4 mt-4">
         <button
           onClick={() => setDropdownOpen(!dropdownOpen)}
-          className="min-w-48 flex items-center py-2.5 px-4 sm:me-3 md:me-4 text-sm font-medium rounded-full border border-gray-200 hover:bg-gray-100 focus:outline-none focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:hover:text-white dark:hover:bg-gray-700 text-gray-100 bg-gradient-to-r from-back-dark to-back-extralight dark:border-gray-600"
+          className="min-w-48 bg-gray-800 no-underline group cursor-pointer relative shadow-2xl shadow-gray-900 rounded-full p-px text-sm font-semibold leading-6 text-white inline-block"
         >
-          <span className="flex-grow">
-            {activeCategory.replace(/([A-Z])/g, " $1").toUpperCase()}
-          </span>
-          <FaChevronDown className="ml-4" />
+         <span className="absolute inset-0 overflow-hidden rounded-full">
+              <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(17,24,39,0.6)_0%,rgba(17,24,39,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+            </span>
+            <div className={`relative flex  items-center z-10 rounded-full py-1 px-6 ring-1 ring-white/10 bg-gray-950`}>
+              <span> {activeCategory.replace(/([A-Z])/g, " $1").toUpperCase()}</span>
+              <FaChevronDown className="ml-20" />
+            </div>
+           
+            <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
         </button>
         {dropdownOpen && (
           <div className="absolute left-0 mt-2 w-full max-w-md bg-gradient-to-b from-back-dark to-back-extralight text-white rounded-md shadow-lg z-10">

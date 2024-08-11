@@ -25,7 +25,7 @@ export default function Event() {
 
   return (
     <>
-      <div>
+      <div className="mb-5">
         <div className="flex flex-col">
           <h1 className="text-text-200 text-[2rem] sm:text-[3rem] font-bold text-center">
             See :{" "}

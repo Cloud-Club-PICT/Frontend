@@ -42,11 +42,11 @@ const AboutUsPage = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              "https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg",
+              "https://media.licdn.com/dms/image/v2/D5622AQFM_1EXLVvl-A/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1713331708353?e=1726704000&v=beta&t=RMIvNn6HoXlW6GgE_n8L27xwM8bdFTVxSSV1ZprJ08g",
 
-              "https://images.pexels.com/photos/1595392/pexels-photo-1595392.jpeg",
-              "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
-              "https://images.pexels.com/photos/3182763/pexels-photo-3182763.jpeg",
+              "https://media.licdn.com/dms/image/v2/D4D22AQGR_8SYvUSBVA/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1713883623874?e=1726704000&v=beta&t=WsA5lhyHgUWm26smNX0W_jUq-myN3JreY-C4m5Pe854",
+              "https://media.licdn.com/dms/image/v2/D5622AQEQmWDynbkn4g/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1713331706697?e=1726704000&v=beta&t=SbFqbuCAIKQhUwPtYzXNV5aZIKdsdzmQ-CVq9ux92Pg",
+              "./images/about1.jpg",
        
 
             ].map((src, index) => (

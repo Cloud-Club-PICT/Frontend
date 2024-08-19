@@ -48,6 +48,7 @@ const Navbar1 = () => {
     { name: "About", link: "about" },
     { name: "Events", link: "events" },
     { name: "Blogs", link: "blogs" },
+    { name: "Members", link: "members" },
     { name: "Contact Us", link: "contact" },
   ];
 
@@ -64,7 +65,7 @@ const Navbar1 = () => {
               />
             </div>
             {/* nav */}
-            <div className="w-1/2 h-full">
+            <div className="w-2/3 h-full">
               <ul
                 className="text-lg font-semibold hidden lg:flex justify-evenly items-center h-full transition-all"
                 style={{ fontFamily: "Montserrat, sans-serif" }}

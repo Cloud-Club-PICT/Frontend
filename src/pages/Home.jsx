@@ -5,6 +5,7 @@ import MembersPage from "../components/HomePage/Members";
 import Footer from "../components/HomePage/Footer";
 import AboutUsPage from "../components/HomePage/AboutUs";
 import Landing1 from "../components/HomePage/Landing1";
+import Members from "../components/HomePage/Members";
 
 const Home = () => {
   return (
@@ -32,6 +33,10 @@ const Home = () => {
       
       <div id="blogs">
         <BlogsPage />
+      </div>
+
+      <div id="members">
+        <Members />
       </div>
       
       <div id="contact">

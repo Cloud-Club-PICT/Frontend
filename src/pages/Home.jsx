@@ -8,21 +8,36 @@ import Landing1 from "../components/HomePage/Landing1";
 
 const Home = () => {
   return (
-    <div className="w-screen bg-gradient-to-b from-back-dark via-back-light to-back-dark ">
+    <div className="w-screen bg-gradient-to-b from-back-dark via-back-light to-back-dark">
       <video
         loop
         muted
         autoPlay
-        className=" absolute h-screen w-screen object-cover -z-3 opacity-20"
+        className="absolute h-screen w-screen object-cover -z-3 opacity-20"
       >
         <source src="/bg.mkv" />
       </video>
-      <Landing1 />
-      <AboutUsPage />
-      <EventsPage />
-      <BlogsPage />
-      <MembersPage />
-      <ContactUsPage />
+      
+      <div id="home">
+        <Landing1 />
+      </div>
+      
+      <div id="about">
+        <AboutUsPage />
+      </div>
+      
+      <div id="events">
+        <EventsPage />
+      </div>
+      
+      <div id="blogs">
+        <BlogsPage />
+      </div>
+      
+      <div id="contact">
+        <ContactUsPage />
+      </div>
+      
       <Footer />
     </div>
   );

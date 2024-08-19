@@ -509,7 +509,7 @@ const BlogData = [
       ]
     },
   {
-    "title": "Exploring the World: Top Travel Destinations",
+    "title": "Online Pathology Platform using React and DynamoDB",
     "username": "Girish Kale and Sonali Kamble",
     "userImg": "https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg",
     "blogImg": "https://media.licdn.com/dms/image/v2/D4D12AQGUgQhJj0yA5g/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1720974929018?e=1728518400&v=beta&t=66Ls7O-W0F_8cBNLBPY7jZ-aI55jB4dzab0MWAcAjBo",
@@ -717,7 +717,7 @@ const BlogData = [
     "title": "Deploying a NodeJS Application on AWS EC2 Instance — Step by Step",
     "username": "Prachi Said & Tirthraj Mahajan",
     "userImg": "https://i.pinimg.com/736x/8b/16/7a/8b167af653c2399dd93b952a48740620.jpg",
-    "blogImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfObc0AwNYaWj5OT22RHOQLa7L-TEN40hR8w&s",
+    "blogImg": "https://media.licdn.com/dms/image/v2/D4D12AQFsWiEZK3sxxA/article-cover_image-shrink_423_752/article-cover_image-shrink_423_752/0/1719149384529?e=1729728000&v=beta&t=rKlSR5H0LYmLShXGm6HTTC8MhT7W4MzfpLda4vDQh8k",
     "description": "In the world of cloud computing, Amazon Web Services (AWS) stands out as a leader, offering a wide range of services to meet the diverse needs of businesses and developers. One of the cornerstone services of AWS is Amazon Elastic Compute Cloud (EC2). In this blog, we will explore what Amazon EC2 is, its features and benefits, and provide a detailed guide on “How to host a NodeJS application on EC2 instance",
     "publishDate": "2024-06-23",
     "category": "AI",
